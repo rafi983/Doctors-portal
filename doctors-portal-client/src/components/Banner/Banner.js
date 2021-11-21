@@ -3,6 +3,7 @@ import Navbar from "../Navbar/Navbar";
 import { Button, Container, Grid, Typography } from "@mui/material";
 import styled from "styled-components";
 import chair from "../../images/chair.png";
+import "./Banner.css";
 
 const StyledButton = styled.button`
   background-image: linear-gradient(to right, #55efc4, #00cec9);
@@ -19,7 +20,7 @@ const StyledButton = styled.button`
 
 const Banner = () => {
   return (
-    <div>
+    <div className="banner">
       <Navbar />
       <Container>
         <Grid

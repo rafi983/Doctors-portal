@@ -1,39 +1,53 @@
 import React from "react";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
-import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
+import Navbar from "../Navbar/Navbar";
+import { Button, Container, Grid, Typography } from "@mui/material";
+import styled from "styled-components";
+import chair from "../../images/chair.png";
+
+const StyledButton = styled.button`
+  background-image: linear-gradient(to right, #55efc4, #00cec9);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  padding: 0.7rem 1.1rem;
+  margin-top: 1.3rem;
+  border: none;
+  outline: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+`;
 
 const Banner = () => {
   return (
     <div>
-      <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static">
-          <Toolbar>
-            <IconButton
-              size="large"
-              edge="start"
-              color="inherit"
-              aria-label="menu"
-              sx={{ mr: 2 }}
-            >
-              <MenuIcon />
-            </IconButton>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-              Doctors Portal
+      <Navbar />
+      <Container>
+        <Grid
+          container
+          spacing={2}
+          style={{
+            justifyContent: "center",
+            alignItems: "center",
+            marginTop: "8rem",
+          }}
+        >
+          <Grid item xs={12} sm={12} md={6} lg={6}>
+            <Typography variant="h2" sx={{ fontWeight: 400 }}>
+              Your New Smile <br /> Starts Here
             </Typography>
-            <Button color="inherit">Home</Button>
-            <Button color="inherit">About</Button>
-            <Button color="inherit">Dental-services</Button>
-            <Button color="inherit">Reviews</Button>
-            <Button color="inherit">Blogs</Button>
-            <Button color="inherit">Contact Us</Button>
-          </Toolbar>
-        </AppBar>
-      </Box>
+            <Typography variant="body1">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Asperiores aut beatae delectus eius explicabo impedit in ipsa
+              minus mollitia? Architecto.
+            </Typography>
+            <StyledButton>Get Appointment</StyledButton>
+          </Grid>
+
+          <Grid item xs={12} sm={12} md={6} lg={6}>
+            <img src={chair} width="100%" />
+          </Grid>
+        </Grid>
+      </Container>
     </div>
   );
 };

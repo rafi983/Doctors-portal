@@ -28,7 +28,7 @@ const Banner = () => {
           style={{
             justifyContent: "center",
             alignItems: "center",
-            marginTop: "8rem",
+            height: "550px",
           }}
         >
           <Grid item xs={12} sm={12} md={6} lg={6}>

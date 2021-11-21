@@ -26,11 +26,7 @@ const Navbar = () => {
               Doctors Portal
             </Typography>
             <Button color="inherit">Home</Button>
-            <Button color="inherit">About</Button>
-            <Button color="inherit">Dental-services</Button>
-            <Button color="inherit">Reviews</Button>
-            <Button color="inherit">Blogs</Button>
-            <Button color="inherit">Contact Us</Button>
+            <Button color="inherit">Dashboard</Button>
           </Toolbar>
         </AppBar>
       </Box>

@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../Navbar/Navbar";
 import { Button, Container, Grid, Typography } from "@mui/material";
 import styled from "styled-components";
 import chair from "../../images/chair.png";
 import "./Banner.css";
+import Feature from "../Feature/Feature";
 
 const StyledButton = styled.button`
   background-image: linear-gradient(to right, #55efc4, #00cec9);
@@ -19,6 +20,14 @@ const StyledButton = styled.button`
 `;
 
 const Banner = () => {
+  const [features, setFeatures] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:5000/features")
+      .then((res) => res.json())
+      .then((data) => setFeatures(data));
+  }, []);
+
   return (
     <div className="banner">
       <Navbar />
@@ -47,6 +56,14 @@ const Banner = () => {
           <Grid item xs={12} sm={12} md={6} lg={6}>
             <img src={chair} width="100%" />
           </Grid>
+        </Grid>
+      </Container>
+
+      <Container>
+        <Grid container spacing={2}>
+          {features?.map((feature) => (
+            <Feature feature={feature} key={feature?._id}></Feature>
+          ))}
         </Grid>
       </Container>
     </div>

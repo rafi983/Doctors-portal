@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Navbar from "../Navbar/Navbar";
 import { Button, Container, Grid, Typography } from "@mui/material";
 import styled from "styled-components";
 import chair from "../../images/chair.png";
@@ -30,7 +29,6 @@ const Banner = () => {
 
   return (
     <div className="banner">
-      <Navbar />
       <Container>
         <Grid
           container

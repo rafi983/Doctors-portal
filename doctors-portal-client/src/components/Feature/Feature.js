@@ -1,6 +1,5 @@
 import React from "react";
 import Box from "@mui/material/Box";
-
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
@@ -23,7 +22,7 @@ const Feature = ({ feature }) => {
   return (
     <Grid item xs={12} sm={12} md={4} lg={4}>
       <Card
-        sx={{ height: "100px", py: 2 }}
+        sx={{ minHeight: "120px", py: 2 }}
         style={{
           backgroundColor: bgColor,
           color: "#fff",
@@ -32,10 +31,10 @@ const Feature = ({ feature }) => {
         }}
       >
         <Grid container spacing={2} sx={{ p: 2 }}>
-          <Grid item xs={12} sm={3} md={3} lg={3}>
+          <Grid item xs={3} sm={3} md={3} lg={3}>
             <i className={icon} style={{ fontSize: "4rem" }}></i>
           </Grid>
-          <Grid item xs={12} sm={9} md={9} lg={9}>
+          <Grid item xs={9} sm={9} md={9} lg={9}>
             <Typography variant="h6">{title}</Typography>
             <Typography variant="body1">{desc}</Typography>
           </Grid>

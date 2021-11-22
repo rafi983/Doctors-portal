@@ -20,11 +20,18 @@ async function run() {
     await client.connect();
     const database = client.db("banner_feature");
     const featuresCollection = database.collection("features");
+    const servicesCollection = database.collection("services");
 
     app.get("/features", async (req, res) => {
       const cursor = featuresCollection.find({});
       const features = await cursor.toArray();
       res.send(features);
+    });
+
+    app.get("/services", async (req, res) => {
+      const cursor = servicesCollection.find({});
+      const services = await cursor.toArray();
+      res.send(services);
     });
   } finally {
     //   await client.close();

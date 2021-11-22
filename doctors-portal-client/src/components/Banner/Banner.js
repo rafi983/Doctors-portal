@@ -5,7 +5,7 @@ import chair from "../../images/chair.png";
 import "./Banner.css";
 import Feature from "../Feature/Feature";
 
-const StyledButton = styled.button`
+export const StyledButton = styled.button`
   background-image: linear-gradient(to right, #55efc4, #00cec9);
   font-size: 1.5rem;
   font-weight: 700;

@@ -12,7 +12,7 @@ const appointmentBanner = {
   marginTop: 175,
 };
 
-const Appointment = () => {
+const AppointmentBanner = () => {
   return (
     <Box style={appointmentBanner} sx={{ flexGrow: 1, my: 5 }}>
       <Container>
@@ -48,4 +48,4 @@ const Appointment = () => {
   );
 };
 
-export default Appointment;
+export default AppointmentBanner;

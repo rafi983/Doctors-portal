@@ -21,6 +21,7 @@ async function run() {
     const database = client.db("banner_feature");
     const featuresCollection = database.collection("features");
     const servicesCollection = database.collection("services");
+    const reviewsCollection = database.collection("reviews");
 
     app.get("/features", async (req, res) => {
       const cursor = featuresCollection.find({});
@@ -32,6 +33,12 @@ async function run() {
       const cursor = servicesCollection.find({});
       const services = await cursor.toArray();
       res.send(services);
+    });
+
+    app.get("/reviews", async (req, res) => {
+      const cursor = reviewsCollection.find({});
+      const reviews = await cursor.toArray();
+      res.send(reviews);
     });
   } finally {
     //   await client.close();
